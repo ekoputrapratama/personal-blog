@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://muhammadsayuti.web.app",
     title: "Personal Blog",
   },
   plugins: [
@@ -21,7 +21,33 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          // prepare images for gatsby
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+            },
+          },
+          // display embedded content (f.e. youtube videos)
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          // improve syntax
+          {
+            resolve: `gatsby-remark-smartypants`,
+          },
+        ],
+        plugins: [`gatsby-remark-images`],
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

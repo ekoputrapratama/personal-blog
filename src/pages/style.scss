@@ -1,0 +1,13 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  display: flex;
+  flex-flow: row;
+}
+.content {
+  flex-grow: 1;
+}
