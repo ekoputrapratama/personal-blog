@@ -3,7 +3,7 @@ import './Sidebar.scss'
 function Sidebar() {
   return (
     <div className="Sidebar">
-      <img src="/assets/me.jpg" />
+      <img src="me.jpg" />
     </div>
   );
 }

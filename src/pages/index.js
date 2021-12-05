@@ -13,9 +13,6 @@ const postsQuery = graphql`
           slug
           frontmatter {
             title
-            excerpt
-            featuredimage
-            date
           }
         }
       }

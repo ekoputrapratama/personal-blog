@@ -16,7 +16,7 @@ const BlogArticleTemplate = ({ data }) => {
       {/* <SEO title={`News | ${title}`} description={excerpt} /> */}
       <h1>{title}</h1>
       <p>
-        <Moment date={date} format="LLL" />
+        {/* <Moment date={date} format="LLL" /> */}
       </p>
       <MDXRenderer>{body}</MDXRenderer>
       <Link to="/news/">All news</Link>
@@ -33,7 +33,6 @@ export const query = graphql`
       excerpt(pruneLength: 160)
       frontmatter {
         title
-        date
       }
     }
   }

@@ -10,7 +10,7 @@
    const { createPage } = actions;
    const postsQuery = await graphql(`
      {
-       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+       allMdx {
          edges {
            node {
              slug
