@@ -34,7 +34,7 @@ jobs:
           channelId: news
           # IMPORTANT!!!! Update this line to your Firebase PROJECT ID
           projectId: nerdiex-99466
-          target: muhammadsayuti
+          target: prod
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
       # create pull request to main branch
