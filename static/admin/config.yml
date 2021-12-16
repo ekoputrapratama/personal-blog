@@ -20,7 +20,9 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { name: title, label: Title }
-      - { label: Date, name: date, widget: date, format: "YYYY-MM-DD" }
+      # - { label: Date, name: date, widget: date, format: "YYYY-MM-DD" }
+      - { label: Date, name: date, widget: date }
       - { label: Featured Image, name: featuredimage, widget: image }
       - { name: excerpt, label: Excerpt }
+      - { label: "Tags", name: "tags", widget: "list" }
       - { name: body, label: Body, widget: markdown }

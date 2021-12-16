@@ -1,0 +1,14 @@
+.PostArticle {
+  padding: 20px 20px;
+  background: #313131;
+  border-radius: 20px;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  .publish-date,
+  .publish-date > * {
+    font-size: 0.8rem;
+  }
+  .title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}

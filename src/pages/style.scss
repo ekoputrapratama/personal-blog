@@ -2,12 +2,148 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #1f1f1f;
+  color: #fff;
 }
 
-.home {
+.home,
+.post-detail {
   display: flex;
   flex-flow: row;
+  box-sizing: border-box;
 }
 .content {
   flex-grow: 1;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  margin-left: 340px;
+}
+a {
+  color: #20a8d8;
+}
+.tags {
+  .content {
+    display: flex;
+    flex-flow: column;
+    margin: 20px 20px;
+    background: #313131;
+    border-radius: 20px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    margin-left: 360px;
+  }
+}
+.privacy-policy {
+  .content {
+    display: flex;
+    flex-flow: column;
+    margin: 20px 20px;
+    background: #313131;
+    border-radius: 20px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    margin-left: 360px;
+    h1 {
+      display: block;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+}
+.post-detail {
+  .content {
+    padding: 0;
+    opacity: 0;
+    display: flex;
+    flex-flow: column;
+    margin: 20px 20px;
+    background: #313131;
+    border-radius: 20px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    margin-left: 360px;
+    .publish-date,
+    .title,
+    .post-content {
+      padding: 0 20px;
+    }
+    .publish-date,
+    .publish-date > * {
+      font-size: 0.8rem;
+    }
+    .featured-img {
+      width: 100%;
+      margin: 20px 0;
+    }
+    .title {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+@keyframes slideFadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.slide-fadein {
+  -webkit-animation-name: slideFadeIn;
+  animation-name: slideFadeIn;
 }

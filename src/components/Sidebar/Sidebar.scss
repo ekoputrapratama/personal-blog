@@ -1,4 +1,50 @@
 .Sidebar {
   width: 300px;
   height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .circular-img {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    img {
+      // height: 100%;
+      width: 100%;
+    }
+  }
+  .name {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+  .social-links {
+    display: flex;
+    flex-flow: row;
+    a {
+      color: #fff;
+      margin: 10px;
+      &:hover {
+        color: #20a8d8;
+      }
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+  .page-links {
+    display: flex;
+    flex-flow: column;
+    margin-top: 20px;
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+  }
 }

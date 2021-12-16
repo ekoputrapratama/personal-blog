@@ -1,0 +1,62 @@
+module.exports = {
+  extends: ['react-app', 'plugin:prettier/recommended'],
+  globals: {
+    __PATH_PREFIX__: true,
+  },
+  plugins: ['prettier'],
+  rules: {
+    // A temporary hack related to IDE not resolving correct package.json
+    'import/no-extraneous-dependencies': 'off',
+    'promise/catch-or-return': 'off',
+    'promise/always-return': 'off',
+    'react/destructuring-assignment': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/require-default-props': 'off',
+    'react/no-array-index-key': 'off',
+    'jsx-a11y/interactive-supports-focus': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'vars-on-top': 'off',
+    'no-var': 'off',
+    'no-useless-return': 'off',
+    'import/prefer-default-export': 'off',
+    'react/jsx-no-bind': 'off',
+    'no-restricted-syntax': 'off',
+    'no-await-in-loop': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'global-require': 'off',
+    'prefer-const': 'off',
+    'no-param-reassign': 'off',
+    'no-plusplus': 'off',
+    'no-bitwise': 'off',
+    'react/button-has-type': 'off',
+    radix: 'off',
+    'no-continue': 'off',
+    'no-underscore-dangle': 'warn',
+    'prefer-destructuring': 'warn',
+    'consistent-return': 'warn',
+    'class-methods-use-this': 'off',
+    'import/no-named-as-default': 'off',
+  },
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
+    createDefaultProgram: true,
+  },
+  settings: {
+    // 'import/resolver': {
+    //   // See https://github.com/benmosher/eslint-plugin-import/issues/1396#issuecomment-575727774 for line below
+    //   node: {},
+    //   webpack: {
+    //     config: require.resolve('./.erb/configs/webpack.config.eslint.ts'),
+    //   },
+    // },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+  },
+};

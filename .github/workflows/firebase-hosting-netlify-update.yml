@@ -1,0 +1,54 @@
+# This GitHub Action creates a PR every time
+# Netlify CMS updates content of our website
+name: Create pull request to 'main' on push to 'publishing'
+"on":
+  push:
+    branches:
+      # watch 'publishing' branch since Netlify CMS
+      # push site changes to this branch (see 'static/admin/config.yml')
+      - publishing
+jobs:
+  pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout code from our repo
+      - name: Checkout
+        uses: actions/checkout@v2
+      # make sure that node.js version is correspond to Netlify CMS requirements
+      - name: Set Node.js version
+        uses: actions/setup-node@master
+        with:
+          node-version: "12"
+      # install dependencies
+      - name: Install dependencies
+        run: yarn install --prod --pure-lockfile
+      # build Gatsby website
+      - name: Build
+        run: yarn build
+      - name: Deploy to Firebase Hosting (staging)
+        id: firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_NERDIEX_99466 }}"
+          channelId: news
+          # IMPORTANT!!!! Update this line to your Firebase PROJECT ID
+          projectId: nerdiex-99466
+        env:
+          FIREBASE_CLI_PREVIEWS: hostingchannels
+      # create pull request to main branch
+      - name: Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "main"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: "Updating News with Netlify CMS"
+          pr_body: "
+            :fire: Visit the preview URL for this PR :fire:
+
+
+            [${{ steps.firebase.outputs.details_url }}](${{ steps.firebase.outputs.details_url }})
+            
+
+            *expires: ${{ steps.firebase.outputs.expire_time }}*
+          "

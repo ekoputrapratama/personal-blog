@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "nerdiex-99466"
+  },
+  "targets": {
+    "nerdiex-99466": {
+      "hosting": {
+        "prod": [
+          "muhammadsayuti"
+        ]
+      }
+    }
+  }
+}
