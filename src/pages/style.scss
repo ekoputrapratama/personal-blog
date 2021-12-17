@@ -76,6 +76,18 @@ a {
       margin-top: 20px;
       margin-bottom: 10px;
     }
+    .post-tags {
+      margin: 20px;
+      display: flex;
+      flex-flow: row;
+      .tag {
+        background-color: #20a8d8;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 20px;
+        margin-right: 10px;
+      }
+    }
   }
 }
 .animated {
