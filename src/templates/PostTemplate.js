@@ -38,7 +38,11 @@ const BlogArticleTemplate = ({ data }) => {
 
         <div className="post-tags">
           {tags.map((tag) => {
-            return <span className="tag">{tag}</span>;
+            return (
+              <span key={tag} className="tag">
+                {tag}
+              </span>
+            );
           })}
         </div>
       </main>
