@@ -29,7 +29,14 @@ const IndexPage = () => {
   const posts = data.allMdx.edges;
   return (
     <div className="home">
-      <SEO title="Home" description="My notes about programming" />
+      <SEO title="Home" description="My notes about programming">
+        <meta
+          http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"
+        />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+      </SEO>
       <Sidebar>
         <Link to={`/tags`}>All Tags</Link>
         <Link to={`/privacy-policy`}>Privacy Policy</Link>
