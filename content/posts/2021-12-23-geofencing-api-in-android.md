@@ -14,8 +14,6 @@ tags:
   - geofencing
   - kotlin
 ---
-*Note : This article is still in progress and most of the part is incomplete.*
-
 Geofencing is a feature in android that allow you to react to an event when the user enter or exit a specific area. This feature have been used by google in their Google Maps application and you should be familiar with it, when you in some area that have a POI(Point Of Interest) in Google Maps it will send you a notification when you enter that area and if you click on it the application will ask you some questions about those place.
 
 Here we will try to imitate that feature but with our own message and POI. Wihout further ado let's try to make it.
