@@ -1121,6 +1121,4 @@ class GeofenceBroadcastReceiver : BroadcastReceiver() {
 }
 ```
 
-
-
-That's it, to test the app it's better that you use mock location app like [Mock GPS](https://play.google.com/store/apps/details?id=net.marlove.mockgps&hl=en) to make it easier to test it.
+That's it, to test the app it's better that you use mock location app like [Mock GPS](https://play.google.com/store/apps/details?id=net.marlove.mockgps&hl=en) to make it easier to test it. For the full source code you can get it Github [here](https://github.com/linuxaddict89/AndroidGeofencing).
